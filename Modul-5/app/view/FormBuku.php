@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="form-area">
-            <h1><?= isset($buku) ? 'Ada yang perlu diganti di<br>Perpustakaan Azri?' : 'Form Penambahan Buku<br>Perpustakaan Azri' ?></h1>
+            <h1><?= isset($buku) ? 'Edit Buku' : 'Tambah Buku' ?></h1>
             
             <form action="/Modul-5/buku/<?= isset($buku) ? 'update' : 'store' ?>" method="POST">
                 <?php if(isset($buku)): ?>

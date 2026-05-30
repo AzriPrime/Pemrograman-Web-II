@@ -39,8 +39,8 @@
                         <td><?= $p['tgl_pinjam'] ?></td>
                         <td><?= $p['tgl_kembali'] ?></td>
                         <td>
-                            <a href="/Modul-5/peminjaman/delete?id=<?= $p['id_peminjaman'] ?>" onclick="return confirm('Yakin hapus?')" class="btn btn-delete">Hapus</a>
-                            <a href="/Modul-5/peminjaman/edit?id=<?= $p['id_peminjaman'] ?>" class="btn btn-edit">Ubah</a>
+                            <a href="<?= $base_url ?>/peminjaman/delete?id=<?= $p['id_peminjaman'] ?>" onclick="return confirm('Yakin hapus?')" class="btn btn-delete" title="Hapus"><img src="<?= $base_url ?>/icons/trash.svg" width="16" height="16" alt="Hapus"></a>
+                            <a href="<?= $base_url ?>/peminjaman/edit?id=<?= $p['id_peminjaman'] ?>" class="btn btn-edit" title="Ubah"><img src="<?= $base_url ?>/icons/wrench.svg" width="16" height="16" alt="Ubah"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="form-area">
-            <h1><?= isset($member) ? 'Ada yang perlu diganti di<br>Data Member?' : 'Form Penambahan Member<br>Perpustakaan Azri' ?></h1>
+            <h1><?= isset($member) ? 'Edit Member' : 'Tambah Member' ?></h1>
             
             <form action="/Modul-5/member/<?= isset($member) ? 'update' : 'store' ?>" method="POST">
                 <?php if(isset($member)): ?>
@@ -39,12 +39,12 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>Tgl Mendaftar:</label>
+                    <label>Tanggal Mendaftar:</label>
                     <input type="datetime-local" name="tgl_mendaftar" value="<?= isset($member) ? date('Y-m-d\TH:i', strtotime($member['tgl_mendaftar'])) : '' ?>" required>
                 </div>
                 
                 <div class="form-group">
-                    <label>Tgl Terakhir Bayar:</label>
+                    <label>Tanggal Tenggat:</label>
                     <input type="date" name="tgl_terakhir_bayar" value="<?= isset($member) ? $member['tgl_terakhir_bayar'] : '' ?>" required>
                 </div>
                 

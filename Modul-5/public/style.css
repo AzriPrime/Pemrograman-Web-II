@@ -3,21 +3,23 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8fafc; /* Default text color to light */
 }
 
 /* ================= HOME LAYOUT ================= */
 body.home-layout {
-    background-color: #808080;
+    background: linear-gradient(135deg, #020617, #0f172a);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .home-layout .card {
-    background-color: white;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -25,23 +27,24 @@ body.home-layout {
     max-width: 90%;
 }
 .home-layout .card-content { flex: 1; }
-.home-layout .card-content h1 { margin: 0; font-size: 48px; color: #333; line-height: 1.2; }
+.home-layout .card-content h1 { margin: 0; font-size: 48px; color: #f8fafc; line-height: 1.2; }
 .home-layout .buttons { display: flex; flex-direction: column; gap: 10px; }
-.home-layout .btn { background-color: #000; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; text-align: center; font-weight: bold; transition: background 0.3s; }
-.home-layout .btn:hover { background-color: #333; }
+.home-layout .btn { background-color: #3b82f6; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; text-align: center; font-weight: bold; transition: background 0.3s; }
+.home-layout .btn:hover { background-color: #2563eb; }
 
 /* ================= TABLE LAYOUT ================= */
 body.table-layout {
     min-height: 100vh;
-    background-color: #f1f5f9;
+    background: linear-gradient(135deg, #020617, #0f172a);
     padding: 40px;
     box-sizing: border-box;
 }
 .table-layout .content {
-    background: white;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -50,32 +53,45 @@ body.table-layout {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #334155;
     padding-bottom: 15px;
 }
-.table-layout .page-header h1 { margin: 0; font-size: 24px; color: #1e293b; font-weight: 600; }
+.table-layout .page-header h1 { margin: 0; font-size: 24px; color: #f8fafc; font-weight: 600; }
 .table-layout .header-actions { display: flex; gap: 10px; }
-.table-layout .btn-back { background-color: #818589; color: white; padding: 10px 20px; font-weight: bold; }
-.table-layout .btn-add-data { background-color: #16a34a; color: white; padding: 10px 20px; font-weight: bold; }
-.table-layout table { width: 100%; border-collapse: collapse; }
-.table-layout th, .table-layout td { border: 1px solid #cbd5e1; padding: 12px 15px; text-align: center; }
-.table-layout th { background-color: #94a3b8; color: #1e293b; font-weight: bold; }
-.table-layout .btn { padding: 6px 12px; border-radius: 4px; text-decoration: none; color: white; font-size: 14px; border: none; cursor: pointer; display: inline-block; }
-.table-layout .btn-edit { background-color: #eab308; color: #1e293b; font-weight: bold; }
-.table-layout .btn-delete { background-color: #ef4444; }
+.table-layout .btn-back { background-color: #475569; color: white; padding: 10px 20px; font-weight: bold; border-radius: 4px; text-decoration: none; }
+.table-layout .btn-add-data { background-color: #10b981; color: white; padding: 10px 20px; font-weight: bold; border-radius: 4px; text-decoration: none; }
+.table-layout table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.table-layout th, .table-layout td { border: 1px solid #334155; padding: 12px 15px; text-align: center; color: #f8fafc; }
+.table-layout th { background-color: #0f172a; color: #f8fafc; font-weight: bold; }
+.table-layout .btn { padding: 6px 12px; border-radius: 4px; text-decoration: none; color: white; font-size: 14px; border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 5px; }
+.table-layout .btn-edit { background-color: #f59e0b; color: #fff; font-weight: bold; }
+.table-layout .btn-delete { background-color: #ef4444; color: #fff; }
 
 /* ================= FORM LAYOUT ================= */
 body.form-layout {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    min-height: 100vh;
 }
-.form-layout header { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; border-bottom: 1px solid #f1f5f9; }
-.form-layout header h2 { margin: 0; color: #1e293b; }
-.form-layout header .btn-back { background-color: #334155; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: bold; }
-.form-layout .container { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 40px; margin-top: 20px; }
-.form-layout .form-area { grid-column: 2; }
-.form-layout .form-area h1 { text-align: center; color: #334155; margin-bottom: 40px; font-weight: normal; }
+.form-layout header { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; border-bottom: 1px solid #334155; background-color: #0f172a; }
+.form-layout header h2 { margin: 0; color: #f8fafc; }
+.form-layout header .btn-back { background-color: #475569; color: white; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-size: 16px; font-weight: bold; }
+.form-layout .container { display: flex; justify-content: center; padding: 40px; margin-top: 20px; }
+.form-layout .form-area { 
+    width: 450px;
+    max-width: 100%;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border: 1px solid #334155;
+}
+.form-layout .form-area h1 { text-align: center; color: #f8fafc; margin-top: 0; margin-bottom: 40px; font-weight: normal; }
 .form-layout .form-group { margin-bottom: 20px; }
-.form-layout label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px; color: #475569; }
-.form-layout input[type="text"], .form-layout input[type="number"], .form-layout input[type="date"], .form-layout input[type="datetime-local"], .form-layout select, .form-layout textarea { width: 100%; padding: 12px; box-sizing: border-box; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; color: #64748b; }
-.form-layout input:focus, .form-layout select:focus, .form-layout textarea:focus { outline: none; border-color: #94a3b8; }
-.form-layout .btn-submit { background-color: #334155; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; margin-top: 10px; }
+.form-layout label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px; color: #cbd5e1; }
+.form-layout input[type="text"], .form-layout input[type="number"], .form-layout input[type="date"], .form-layout input[type="datetime-local"], .form-layout select, .form-layout textarea { 
+    width: 100%; padding: 12px; box-sizing: border-box; 
+    background-color: #0f172a; border: 1px solid #334155; border-radius: 6px; color: #f8fafc; 
+}
+.form-layout input:focus, .form-layout select:focus, .form-layout textarea:focus { outline: none; border-color: #3b82f6; }
+.form-layout .btn-submit { background-color: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; margin-top: 10px; width: 100%; font-weight: bold; }
+.form-layout .btn-submit:hover { background-color: #2563eb; }

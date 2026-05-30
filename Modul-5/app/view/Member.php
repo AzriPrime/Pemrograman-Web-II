@@ -25,8 +25,8 @@
                     <th>Nama</th>
                     <th>Nomor Member</th>
                     <th>Alamat</th>
-                    <th>Tgl Mendaftar</th>
-                    <th>Tgl Terakhir Bayar</th>
+                    <th>Tanggal Mendaftar</th>
+                    <th>Tanggal Tenggat</th>
                     <th>Opsi</th>
                 </tr>
             </thead>
@@ -41,8 +41,8 @@
                         <td><?= $m['tgl_mendaftar'] ?></td>
                         <td><?= $m['tgl_terakhir_bayar'] ?></td>
                         <td>
-                            <a href="/Modul-5/member/delete?id=<?= $m['id_member'] ?>" onclick="return confirm('Yakin hapus?')" class="btn btn-delete">Hapus</a>
-                            <a href="/Modul-5/member/edit?id=<?= $m['id_member'] ?>" class="btn btn-edit">Ubah</a>
+                            <a href="<?= $base_url ?>/member/delete?id=<?= $m['id_member'] ?>" onclick="return confirm('Yakin hapus?')" class="btn btn-delete" title="Hapus"><img src="<?= $base_url ?>/icons/trash.svg" width="16" height="16" alt="Hapus"></a>
+                            <a href="<?= $base_url ?>/member/edit?id=<?= $m['id_member'] ?>" class="btn btn-edit" title="Ubah"><img src="<?= $base_url ?>/icons/wrench.svg" width="16" height="16" alt="Ubah"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

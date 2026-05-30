@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="form-area">
-            <h1><?= isset($peminjaman) ? 'Ubah Data Peminjaman<br>Perpustakaan Azri' : 'Form Penambahan Peminjaman<br>Perpustakaan Azri' ?></h1>
+            <h1><?= isset($peminjaman) ? 'Edit Peminjaman' : 'Tambah Peminjaman' ?></h1>
             
             <form action="/Modul-5/peminjaman/<?= isset($peminjaman) ? 'update' : 'store' ?>" method="POST">
                 <?php if(isset($peminjaman)): ?>
